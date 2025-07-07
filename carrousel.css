@@ -1,0 +1,123 @@
+
+
+/* --- Estilos da Seção de Palestrantes --- */
+#speakers-section {
+    width: 100%;
+    padding: 60px 0;
+    background-color: #fff;
+}
+
+#speakers-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+#speakers-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+/* --- Estrutura do Carrossel --- */
+.carousel-container {
+    position: relative; /* Necessário para posicionar os botões */
+}
+
+.carousel-viewport {
+    overflow: hidden; /* A mágica acontece aqui: esconde os itens fora da área visível */
+}
+
+.carousel-track {
+    display: flex; /* Alinha os itens lado a lado */
+    transition: transform 0.5s ease-in-out; /* Animação de deslize */
+}
+
+.speaker-item {
+    /* Define o tamanho de cada slide. 
+        Mostra 1 item em telas pequenas, 2 em médias e 4 em grandes. */
+    flex: 0 0 100%; /* Celular: 1 item por vez */
+    box-sizing: border-box;
+    padding: 0 15px;
+    text-align: center;
+}
+
+.speaker-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+    width: 200px; /* Tamanho fixo para a imagem circular */
+    height: 200px;
+    margin-bottom: 15px;
+    border: 5px solid #f0f0f0;
+}
+
+.speaker-item h3 {
+    font-size: 1.5rem;
+    margin: 10px 0 5px;
+    color: #444;
+}
+
+.speaker-item p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* --- Botões de Navegação --- */
+.carousel-button {
+    position: absolute;
+    top: 40%; /* Centraliza verticalmente na altura da imagem */
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+.carousel-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-button.prev {
+    left: -25px;
+}
+
+.carousel-button.next {
+    right: -25px;
+}
+
+/* Desabilita o botão visualmente */
+.carousel-button:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+/* --- Responsividade --- */
+@media (min-width: 600px) {
+    .speaker-item {
+        flex: 0 0 50%; /* Tablet: 2 itens por vez */
+    }
+}
+
+@media (min-width: 992px) {
+    .speaker-item {
+        flex: 0 0 25%; /* Desktop: 4 itens por vez */
+    }
+    .carousel-button.prev {
+        left: -40px;
+    }
+    .carousel-button.next {
+        right: -40px;
+    }
+}
