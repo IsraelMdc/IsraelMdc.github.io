@@ -1,1 +1,0 @@
-# IsraelMdc.github.io
