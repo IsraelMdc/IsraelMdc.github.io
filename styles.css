@@ -317,7 +317,7 @@ a { color: inherit; text-decoration: none; }
   overflow: hidden;
 }
 .campanha-photo img {
-  width: 210%;
+  width: 190%;
   max-width: none;
 }
 .campanha-copy { padding: 60px 0; }
@@ -433,9 +433,10 @@ a { color: inherit; text-decoration: none; }
   overflow: hidden;
 }
 .quem-photo img {
-  width: 165%;
+  width: 180%;
   max-width: none;
-  margin-left: -65%; /* puxa a faixa p/ mostrar o lado direito (pessoa) */
+  margin-left: -75%; /* puxa a faixa p/ mostrar o lado direito (pessoa) */
+  margin-top: auto;
 }
 
 /* ============================================================
