@@ -98,40 +98,15 @@ a { color: inherit; text-decoration: none; }
   min-height: 96px;
 }
 
-/* Logo "Dr.Thiago PEIXOTO vereador" */
+/* Logo (imagem branca sobre fundo transparente) */
 .logo {
   display: inline-flex;
-  flex-direction: column;
-  line-height: .9;
-  color: #fff;
+  align-items: center;
+  flex-shrink: 0;
 }
-.logo-line1 {
-  display: inline-flex;
-  align-items: flex-start;
-  gap: 2px;
-}
-.logo-dr {
-  font-weight: 800;
-  font-size: .8rem;
-  margin-top: 6px;
-}
-.logo-name {
-  font-weight: 1000;
-  font-size: 1.75rem;
-  letter-spacing: -.5px;
-}
-.logo-role {
-  font-weight: 700;
-  font-size: .55rem;
-  margin-top: 2px;
-  margin-left: 2px;
-}
-.logo-line2 {
-  font-weight: 700;
-  font-size: .72rem;
-  letter-spacing: 3.5px;
-  align-self: flex-end;
-  margin-top: 2px;
+.logo img {
+  height: 54px;
+  width: auto;
 }
 
 /* Nav */
@@ -589,8 +564,7 @@ a { color: inherit; text-decoration: none; }
   gap: 18px;
   margin-bottom: 56px;
 }
-.logo-footer .logo-name { font-size: 2.1rem; }
-.logo-footer .logo-line2 { font-size: .8rem; }
+.logo-footer img { height: 68px; }
 .footer-tag {
   margin: 0;
   font-size: .98rem;
@@ -642,9 +616,11 @@ a { color: inherit; text-decoration: none; }
 
 @media (max-width: 980px) {
   .nav-toggle { display: flex; }
+  .header-inner { min-height: 76px; }
+  .logo img { height: 46px; }
   .main-nav {
     position: absolute;
-    top: 96px;
+    top: 100%;
     left: 0;
     right: 0;
     flex-direction: column;
@@ -691,10 +667,55 @@ a { color: inherit; text-decoration: none; }
 
 @media (max-width: 560px) {
   .container { padding: 0 20px; }
-  .news-grid { grid-template-columns: 1fr; }
-  .stats-grid { grid-template-columns: 1fr 1fr; }
+
+  .logo img { height: 40px; }
+
+  /* Hero: títulos menores e foto maior abaixo do texto */
+  .hero-copy { padding: 28px 0 12px; }
+  .hero-title { font-size: 2.15rem; }
+  .hero-social { font-size: .9rem; margin-bottom: 18px; }
+  .hero-sub { font-size: 1rem; margin: 18px 0 24px; }
+  .hero {
+    background-size: 175% auto;
+    background-position: bottom right;
+    padding-bottom: 64vw;
+  }
+
+  .pautas { padding: 24px 14px; }
+  .pautas-line { font-size: 1rem; gap: 12px 14px; }
+
+  .campanha-copy { padding: 4px 0 44px; }
+  .campanha-title { font-size: 2rem; }
+  .campanha-strong { font-size: 1.35rem; }
+
+  .camara { padding: 56px 0 48px; }
+  .camara-title { font-size: 1.8rem; }
+  .camara-desc { font-size: 1.05rem; margin-bottom: 32px; }
+
+  .stats { padding: 44px 0; }
+  .stats-grid { grid-template-columns: 1fr 1fr; gap: 30px 16px; }
+  .stat-num { font-size: 2.7rem; }
+  .stat-label { font-size: .78rem; }
+
+  .quem-copy { padding: 48px 0 10px; }
+  .quem-chip { font-size: 1.3rem; padding: 6px 18px 8px; }
+  .quem-title { font-size: 2.2rem; }
+  .quem-desc { font-size: 1.1rem; }
+
+  .noticias { padding: 52px 0 56px; }
+  .noticias-title { font-size: 2.2rem; margin-bottom: 34px; }
+  .news-grid { grid-template-columns: 1fr; gap: 32px; }
+  .news-more { margin-top: 40px; }
+
+  .participe { padding: 56px 0; }
+  .participe-title { font-size: 2.4rem; }
+  .participe-inner { gap: 36px; }
+
   .footer-cols { grid-template-columns: 1fr; }
   .contato-box { padding: 32px 24px; }
   .form-consent { margin-left: 0; }
-  .pautas-line { font-size: 1rem; gap: 12px 14px; }
+
+  .site-footer { padding: 48px 0 60px; }
+  .footer-brand { margin-bottom: 36px; }
+  .logo-footer img { height: 54px; }
 }
